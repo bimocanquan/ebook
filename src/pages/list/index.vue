@@ -1,31 +1,28 @@
 <template>
   <div>
-     <i-card v-for="item in list" :key="item" i-class="split" :title="item.name" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-         <view slot="content">{{item.remark}}</view>
-         <view slot="footer">{{item.author}}</view>
-        </i-card>    
+    <i-panel title="分类图书">
+      <view>
+        <i-card i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
+            <view slot="content">简介：{{item.remark}}</view>
+            <view slot="footer">作者：{{item.author}}</view>
+        </i-card>
+      </view>
+    </i-panel>
   </div>
-  </template>
+</template>
 
 <script>
 export default {
   data () {
     return {
-      list:[]
-      }
+      recommand: []
+    }
   },
   onLoad (option){
+    console.log(option.type)
     this.recommand = require('@/data/' + option.type + '.json')
-    console.log(this.list)
   },
-
-  methods: {
-  
-    },
- 
-
   created () {
-   
   }
 }
 </script>

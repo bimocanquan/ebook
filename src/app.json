@@ -1,15 +1,14 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/list/main",
     "pages/shelf/main",
     "pages/mine/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "笔墨电子书",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
@@ -32,18 +31,6 @@
       "pagePath": "pages/mine/main",
       "iconPath": "static/images/_mine.png",
       "selectedIconPath": "static/images/mine.png"
-    }],
-
-    "items": [{
-      "name": "我的",
-      "pagePath": "pages/mine/main",
-      "icon": "static/tabs/home.png",
-      "activeIcon": "static/tabs/home-active.png"
-    }, {
-      "name": "收藏",
-      "pagePath": "pages/logs/main",
-      "icon": "static/tabs/orders.png",
-      "activeIcon": "static/tabs/orders-active.png"
     }],
     "position": "bottom"
   }
